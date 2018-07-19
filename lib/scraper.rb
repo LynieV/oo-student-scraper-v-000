@@ -23,6 +23,20 @@ class Scraper
       profile.attribute("href").value
         student.each do |link|
           if link.include? ("twitter")
+            student[:twitter] = link
+          elsif link.include?("linkedin")
+            student[:linkedin] = link
+          elsif link.include?("github")
+            student[:github] = link
+          elsif link.include?(".com")
+            student[:blog] = link
+          end
+          #binding.pry
+        end
+        student[:profile_quote] = prof.css(".profile-quote").text
+        student[:bio] = prof.css("div.description-holder p").text
+        student
+      end
 
     end
   end
