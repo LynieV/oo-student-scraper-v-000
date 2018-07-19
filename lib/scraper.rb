@@ -35,4 +35,5 @@ class Scraper
         student[:bio] = prof.css("div.description-holder p").text
         student
       end
+    end
 end
