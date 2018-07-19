@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'pry'
-
+#collaboration with Brandon Green, Alicia Yu, Cory Veten, Maurice Argoetti, Heidi H
 class Scraper
 
   def self.scrape_index_page(index_url)
